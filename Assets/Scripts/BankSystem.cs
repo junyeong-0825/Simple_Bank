@@ -36,7 +36,58 @@ public class BankSystem : MonoBehaviour
         WithdrawalBtn.SetActive(false);
         DepositBtn.SetActive(false);
     }
-
+    public void Add10000Btn()
+    {
+        if(haveCash >= 10000)
+        {
+            Deposit(10000);
+            cash.text = haveCash.ToString();
+            balance.text = haveBalance.ToString();
+        }
+        else
+        {
+            Debug.Log("µ·¾ø¾û!");
+        }
+    }
+    public void Add30000Btn()
+    {
+        if (haveCash >= 30000)
+        {
+            Deposit(30000);
+            cash.text = haveCash.ToString();
+            balance.text = haveBalance.ToString();
+        }
+        else
+        {
+            Debug.Log("µ·¾ø¾û!");
+        }
+    }
+    public void Add50000Btn()
+    {
+        if (haveCash >= 50000)
+        {
+            Deposit(50000);
+            cash.text = haveCash.ToString();
+            balance.text = haveBalance.ToString();
+        }
+        else
+        {
+            Debug.Log("µ·¾ø¾û!");
+        }
+    }
+    public void AddCustomBtn()//InputField¿¡¼­ ¹ÞÀº °ªÀ» ±âÁØÀ¸·Î ¸ó°¡ ÇØ¾ß´ï
+    {
+        if (haveCash >= 10000)
+        {
+            Deposit(10000);
+            cash.text = haveCash.ToString();
+            balance.text = haveBalance.ToString();
+        }
+        else
+        {
+            Debug.Log("µ·¾ø¾û!");
+        }
+    }
     void Deposit(int value)
     {
         haveCash -= value;
